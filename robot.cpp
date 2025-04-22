@@ -53,7 +53,7 @@ int main (int argc, char* argv[]) {
     // 输出结果
     //std::cout << Tau.transpose() << std::endl;
     //std::cout << Utils::GetModelDOFOverview(*model_urdf);
-    //std::cout << Utils::GetModelHierarchy(*model_urdf);
+    std::cout << Utils::GetModelHierarchy(*model_urdf);
     // 清理
     delete model_urdf;
 
