@@ -1,0 +1,814 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.6.0-4-g7f85cfe  Build Version: 1.6.7995.38578
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="humanf5">
+  <link
+    name="base_link">
+    <inertial>
+      <origin
+        xyz="-0.0111727688713037 6.98440574264936E-08 0.0236530828256591"
+        rpy="0 0 0" />
+      <mass
+        value="0.731742114842351" />
+      <inertia
+        ixx="0.000620116492315179"
+        ixy="-5.00086449678537E-09"
+        ixz="6.34785206492023E-05"
+        iyy="0.00285543335335614"
+        iyz="4.31521738914614E-11"
+        izz="0.003125458946521" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://humanf5/meshes/base_link.STL" />
+      </geometry>
+      <material
+        name="grey">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://humanf5/meshes/base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="ZR_A">
+    <inertial>
+      <origin
+        xyz="0.00675569407091892 0.00181937490971118 -0.0149070329137755"
+        rpy="0 0 0" />
+      <mass
+        value="0.0441079608564007" />
+      <inertia
+        ixx="4.96223545076633E-06"
+        ixy="-5.24101636113598E-21"
+        ixz="3.42413023173457E-08"
+        iyy="1.80107506830303E-05"
+        iyz="-1.27054942088145E-21"
+        izz="1.8010660828609E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://humanf5/meshes/ZR_A.STL" />
+      </geometry>
+      <material
+        name="grey">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://humanf5/meshes/ZR_A.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="ZRJ_A"
+    type="revolute">
+    <origin
+      xyz="-0.0615260292197563 -0.00181937466012583 0.0730090281052713"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="ZR_A" />
+    <axis
+      xyz="0.999996556927911 0 -0.00262414411238171" />
+    <limit
+      lower="-3.14"
+      upper="3.14"
+      effort="100"
+      velocity="100" />
+      <dynamics damping="0.1" friction="0.05"/>
+  </joint>
+  <link
+    name="ZP_A">
+    <inertial>
+      <origin
+        xyz="-0.0392504842702751 0.00727847688875849 0.182280186592451"
+        rpy="0 0 0" />
+      <mass
+        value="3.3456565612624" />
+      <inertia
+        ixx="0.0288939697036248"
+        ixy="8.18674967086649E-07"
+        ixz="0.00233970544342668"
+        iyy="0.0292162238308768"
+        iyz="-5.11690342223231E-06"
+        izz="0.00615250356375686" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://humanf5/meshes/ZP_A.STL" />
+      </geometry>
+      <material
+        name="grey">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://humanf5/meshes/ZP_A.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="ZPJ_A"
+    type="revolute">
+    <origin
+      xyz="0.000104921824889859 -0.00488570708267677 0.0399831179779535"
+      rpy="0 0 0" />
+    <parent
+      link="ZR_A" />
+    <child
+      link="ZP_A" />
+    <axis
+      xyz="0 1 0" />
+    <limit
+      lower="-3.14"
+      upper="3.14"
+      effort="100"
+      velocity="100" />
+      <dynamics damping="0.1" friction="0.05"/>
+  </joint>
+  <link
+    name="ZP_K">
+    <inertial>
+      <origin
+        xyz="0.0152173243447841 -4.49762182228586E-05 0.211732001278374"
+        rpy="0 0 0" />
+      <mass
+        value="6.3204387387176" />
+      <inertia
+        ixx="0.0777043163832531"
+        ixy="1.17887773529168E-07"
+        ixz="-0.00426955199538866"
+        iyy="0.0774644101290439"
+        iyz="-4.53024316922693E-08"
+        izz="0.0186113779769133" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://humanf5/meshes/ZP_K.STL" />
+      </geometry>
+      <material
+        name="grey">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://humanf5/meshes/ZP_K.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="ZPJ_K"
+    type="revolute">
+    <origin
+      xyz="-0.040704117018561 0 0.316643301434465"
+      rpy="0 0 0" />
+    <parent
+      link="ZP_A" />
+    <child
+      link="ZP_K" />
+    <axis
+      xyz="0 1 0" />
+    <limit
+      lower="-3.14"
+      upper="3.14"
+      effort="100"
+      velocity="100" />
+      <dynamics damping="0.1" friction="0.05"/>
+  </joint>
+  <link
+    name="ZR_H">
+    <inertial>
+      <origin
+        xyz="0.00241592653199024 1.38527050530524E-06 -0.00115425959787041"
+        rpy="0 0 0" />
+      <mass
+        value="0.1845726906535" />
+      <inertia
+        ixx="6.94143125690122E-05"
+        ixy="-4.40457132572236E-20"
+        ixz="2.30900862833362E-05"
+        iyy="0.000381147182635704"
+        iyz="1.89735380184963E-19"
+        izz="0.000428202471093636" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://humanf5/meshes/ZR_H.STL" />
+      </geometry>
+      <material
+        name="grey">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://humanf5/meshes/ZR_H.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="ZRJ_H"
+    type="revolute">
+    <origin
+      xyz="0.0289453960941223 9.46980042551004E-05 0.424015686263854"
+      rpy="0 0 0" />
+    <parent
+      link="ZP_K" />
+    <child
+      link="ZR_H" />
+    <axis
+      xyz="0.997427088599528 0 -0.0716882342359473" />
+    <limit
+      lower="-3.14"
+      upper="3.14"
+      effort="100"
+      velocity="100" />
+      <dynamics damping="0.1" friction="0.05"/>
+  </joint>
+  <link
+    name="ZP_H">
+    <inertial>
+      <origin
+        xyz="9.99200722162641E-15 6.66133814775094E-15 -4.44089209850063E-16"
+        rpy="0 0 0" />
+      <mass
+        value="0.0610725611857856" />
+      <inertia
+        ixx="4.46593103671058E-05"
+        ixy="-4.18222517706811E-21"
+        ixz="-2.5410988417629E-21"
+        iyy="6.87066313340089E-06"
+        iyz="-2.64697796016969E-20"
+        izz="4.46593103671058E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://humanf5/meshes/ZP_H.STL" />
+      </geometry>
+      <material
+        name="grey">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://humanf5/meshes/ZP_H.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="ZPJ_H"
+    type="revolute">
+    <origin
+      xyz="0.0028672668934322 0.000189380793572891 0.0186066235865521"
+      rpy="0 0 0" />
+    <parent
+      link="ZR_H" />
+    <child
+      link="ZP_H" />
+    <axis
+      xyz="0 -1 0" />
+    <limit
+      lower="-3.14"
+      upper="3.14"
+      effort="100"
+      velocity="100" />
+      <dynamics damping="0.1" friction="0.05"/>
+  </joint>
+  <link
+    name="ZY_H">
+    <inertial>
+      <origin
+        xyz="1.10705888900497E-12 -1.62803104331033E-12 -0.00376650806382672"
+        rpy="0 0 0" />
+      <mass
+        value="0.0624275682819288" />
+      <inertia
+        ixx="5.40134288941489E-05"
+        ixy="5.84452733605467E-20"
+        ixz="9.82558218814988E-20"
+        iyy="4.44846890990617E-05"
+        iyz="2.10064170919066E-19"
+        izz="9.3199534965055E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://humanf5/meshes/ZY_H.STL" />
+      </geometry>
+      <material
+        name="grey">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://humanf5/meshes/ZY_H.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="ZYJ_H"
+    type="revolute">
+    <origin
+      xyz="0 0 0.0212868080113966"
+      rpy="0 0 0" />
+    <parent
+      link="ZP_H" />
+    <child
+      link="ZY_H" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-3.14"
+      upper="3.14"
+      effort="100"
+      velocity="100" />
+      <dynamics damping="0.1" friction="0.05"/>
+  </joint>
+  <link
+    name="B">
+    <inertial>
+      <origin
+        xyz="7.75222588089708E-06 1.88737914186277E-15 -0.0002412331294952"
+        rpy="0 0 0" />
+      <mass
+        value="28.2518829759612" />
+      <inertia
+        ixx="0.867792910306226"
+        ixy="6.93889390390723E-17"
+        ixz="-2.39840411105016E-05"
+        iyy="0.650336573731394"
+        iyz="6.93889390390723E-17"
+        izz="0.351973015641288" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://humanf5/meshes/B.STL" />
+      </geometry>
+      <material
+        name="grey">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://humanf5/meshes/B.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="BJ"
+    type="fixed">
+    <origin
+      xyz="-0.00806882324426378 -0.0995015225755529 0.260412934458925"
+      rpy="0 0 0" />
+    <parent
+      link="ZY_H" />
+    <child
+      link="B" />
+    <axis
+      xyz="0 0 0" />
+    <limit
+      lower="-3.14"
+      upper="3.14"
+      effort="100"
+      velocity="100" />
+      <dynamics damping="0.1" friction="0.05"/>
+  </joint>
+  <link
+    name="YY_H">
+    <inertial>
+      <origin
+        xyz="7.18758386142326E-13 -1.57240886977661E-12 -0.00242650806392009"
+        rpy="0 0 0" />
+      <mass
+        value="0.0624275682819291" />
+      <inertia
+        ixx="5.40134288941488E-05"
+        ixy="6.35274710440725E-21"
+        ixz="-2.10911203866321E-19"
+        iyy="4.44846890990617E-05"
+        iyz="-7.96210970419042E-20"
+        izz="9.31995349650552E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://humanf5/meshes/YY_H.STL" />
+      </geometry>
+      <material
+        name="grey">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://humanf5/meshes/YY_H.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="YYJ_H"
+    type="revolute">
+    <origin
+      xyz="0.00806882324464314 -0.0995015225723495 -0.261757026235003"
+      rpy="0 0 0" />
+    <parent
+      link="B" />
+    <child
+      link="YY_H" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-3.14"
+      upper="3.14"
+      effort="100"
+      velocity="100" />
+      <dynamics damping="0.1" friction="0.05"/>
+  </joint>
+  <link
+    name="YP_H">
+    <inertial>
+      <origin
+        xyz="8.49320613838245E-15 7.04991620636974E-15 2.22044604925031E-16"
+        rpy="0 0 0" />
+      <mass
+        value="0.0610725611857856" />
+      <inertia
+        ixx="4.46593103671057E-05"
+        ixy="1.09055491958991E-20"
+        ixz="-2.5410988417629E-21"
+        iyy="6.87066313340088E-06"
+        iyz="-3.15519772852227E-20"
+        izz="4.46593103671057E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://humanf5/meshes/YP_H.STL" />
+      </geometry>
+      <material
+        name="grey">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://humanf5/meshes/YP_H.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="YPJ_H"
+    type="revolute">
+    <origin
+      xyz="0 0 -0.0199468080114926"
+      rpy="0 0 0" />
+    <parent
+      link="YY_H" />
+    <child
+      link="YP_H" />
+    <axis
+      xyz="0 1 0" />
+    <limit
+      lower="-3.14"
+      upper="3.14"
+      effort="100"
+      velocity="100" />
+      <dynamics damping="0.1" friction="0.05"/>
+  </joint>
+  <link
+    name="YR_H">
+    <inertial>
+      <origin
+        xyz="-0.0160340316050988 -0.000144368460854805 -0.207927720451755"
+        rpy="0 0 0" />
+      <mass
+        value="6.19829580493689" />
+      <inertia
+        ixx="0.0772432578104852"
+        ixy="1.11522180447007E-07"
+        ixz="-0.00505607757029829"
+        iyy="0.0774507081337267"
+        iyz="-4.72700229419212E-08"
+        izz="0.018399103071771" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://humanf5/meshes/YR_H.STL" />
+      </geometry>
+      <material
+        name="grey">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://humanf5/meshes/YR_H.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="YRJ_H"
+    type="revolute">
+    <origin
+      xyz="-0.00328373412815081 -0.000279546655647889 -0.0185526509381042"
+      rpy="0 0 0" />
+    <parent
+      link="YP_H" />
+    <child
+      link="YR_H" />
+    <axis
+      xyz="0.996382279552126 0 -0.0849844279530565" />
+    <limit
+      lower="-3.14"
+      upper="3.14"
+      effort="100"
+      velocity="100" />
+      <dynamics damping="0.1" friction="0.05"/>
+  </joint>
+  <link
+    name="YP_K">
+    <inertial>
+      <origin
+        xyz="-0.00485024487929919 -0.000890182478761103 -0.126939910236622"
+        rpy="0 0 0" />
+      <mass
+        value="3.42369196741716" />
+      <inertia
+        ixx="0.029376996699492"
+        ixy="5.87637056643359E-07"
+        ixz="0.00130707124956206"
+        iyy="0.0292250145794457"
+        iyz="-5.1450545037043E-06"
+        izz="0.00630674143939119" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://humanf5/meshes/YP_K.STL" />
+      </geometry>
+      <material
+        name="grey">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://humanf5/meshes/YP_K.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="YPJ_K"
+    type="revolute">
+    <origin
+      xyz="-0.034429301974465 -0.00014469192756883 -0.42360601019112"
+      rpy="0 0 0" />
+    <parent
+      link="YR_H" />
+    <child
+      link="YP_K" />
+    <axis
+      xyz="0 -1 0" />
+    <limit
+      lower="-3.14"
+      upper="3.14"
+      effort="100"
+      velocity="100" />
+      <dynamics damping="0.1" friction="0.05"/>
+  </joint>
+  <link
+    name="YP_A">
+    <inertial>
+      <origin
+        xyz="0.00124052773642824 -0.00121148039371322 -0.0149486150172848"
+        rpy="0 0 0" />
+      <mass
+        value="0.0441079608564007" />
+      <inertia
+        ixx="1.80107506830303E-05"
+        ixy="6.88214269644119E-21"
+        ixz="2.11758236813575E-22"
+        iyy="4.96214559634508E-06"
+        iyz="-2.64697796016969E-21"
+        izz="1.80107506830303E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://humanf5/meshes/YP_A.STL" />
+      </geometry>
+      <material
+        name="grey">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://humanf5/meshes/YP_A.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="YPJ_A"
+    type="continuous">
+    <origin
+      xyz="0.0264024672714643 0 -0.318155174730158"
+      rpy="0 0 0" />
+    <parent
+      link="YP_K" />
+    <child
+      link="YP_A" />
+    <axis
+      xyz="0 1 0" />
+    <limit
+      lower="-3.14"
+      upper="3.14"
+      effort="100"
+      velocity="100" />
+      <dynamics damping="0.1" friction="0.05"/>
+  </joint>
+  <link
+    name="YR_A">
+    <inertial>
+      <origin
+        xyz="0.0556819002183759 -2.64890815387386E-05 -0.0439966614543383"
+        rpy="0 0 0" />
+      <mass
+        value="0.775850087495915" />
+      <inertia
+        ixx="0.000627471857937521"
+        ixy="-5.01824807893508E-09"
+        ixz="-0.000100275100582762"
+        iyy="0.00287344429495782"
+        iyz="-2.51706373625982E-10"
+        izz="0.00314107657239905" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://humanf5/meshes/YR_A.STL" />
+      </geometry>
+      <material
+        name="grey">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://humanf5/meshes/YR_A.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="YRJ_A"
+    type="revolute">
+    <origin
+      xyz="-0.00401043877530138 -0.000635880793831312 -0.0403253574622797"
+      rpy="0 0 0" />
+    <parent
+      link="YP_A" />
+    <child
+      link="YR_A" />
+    <axis
+      xyz="0.99805483195742 0 0.0623422200955859" />
+    <limit
+      lower="-3.14"
+      upper="3.14"
+      effort="100"
+      velocity="100" />
+      <dynamics damping="0.1" friction="0.05"/>
+  </joint>
+</robot>
